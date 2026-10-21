@@ -1,3 +1,42 @@
+2026-10-21  Bruno Haible  <bruno@clisp.org>
+
+	Update from gnulib.
+	2026-06-07  Bruno Haible  <bruno@clisp.org>
+		Detect invalid writes to the returned string in some cases.
+		* localcharset.c (locale_charset): Change two variables from
+		'char *' to 'const char *'.
+	2026-04-11  Paul Eggert  <eggert@cs.ucla.edu>
+		doc: be more like POSIX in threading terms
+	2025-12-09  Bruno Haible  <bruno@clisp.org>
+		lib: Reduce scope of local variables.
+		M = Move variable declaration to its initialization.
+		R = Reduce scope.
+		* localcharset.c (locale_charset): MR.
+	2025-09-10  Bruno Haible  <bruno@clisp.org>
+		localcharset: Remove support for IRIX.
+		* localcharset.h: Update comments.
+		* localcharset.c (alias_table): Remove entries for IRIX.
+	2025-09-09  Bruno Haible  <bruno@clisp.org>
+		localcharset: Remove support for OSF/1.
+		* localcharset.h: Update comments.
+		* localcharset.c (alias_table): Remove entries for OSF/1.
+	2024-12-23  Bruno Haible  <bruno@clisp.org>
+		localcharset: Support the UTF-8 environment on native Windows.
+		* localcharset.c (locale_charset): Recognize also the special
+		case of a setlocale() result that ends in ".UTF-8".
+	2024-11-17  Collin Funk  <collin.funk1@gmail.com>
+		doc: Prefer https urls where possible.
+	2023-10-02  Bruno Haible  <bruno@clisp.org>
+		Avoid internal compiler error with -Wextra on macOS 10.5.
+		* localcharset.c (locale_charset): Use an empty compound
+		statement instead of a null statement.
+	2023-07-13  Bruno Haible  <bruno@clisp.org>
+		localcharset: Clean up locale encodings used by glibc.
+		* localcharset.h: Remove VISCII from the list, since never
+		supported in glibc/localedata/SUPPORTED. JOHAB is not supported
+		by glibc any more since 2000-09-25. TCVN5712-1 is not supported
+		by glibc any more since 2012-05-21.
+
 2026-08-10  Bruno Haible  <bruno@clisp.org>
 
 	Switch to libtool 2.6.2.
